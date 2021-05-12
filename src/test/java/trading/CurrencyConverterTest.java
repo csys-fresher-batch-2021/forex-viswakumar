@@ -5,15 +5,15 @@ import trading.service.CurrencyConverter;
 public class CurrencyConverterTest {
 	public static void main(String[] args) {
 		//test1
-		double doller=0;
-		double inr =400;
-		double actual=CurrencyConverter.converter(doller, inr);
-		System.out.println( inr+" is equal to " +actual+"$");
+		double dollar=88;
+		String inr ="inr";
+		double actual=CurrencyConverter.converter(dollar, inr);
+		System.out.println( dollar+" is equal to " +actual+"Rs");
          
 		//test2
-				double doller1=20;
-				double inr1 =0;
-				double actual1=CurrencyConverter.converter(doller1, inr1);
-				System.out.println( doller1 +" is equal to "+actual1+"Rs");
+				double dollar1=74;
+				String inr1 ="dollar";
+				double actual1=CurrencyConverter.converter(dollar1, inr1);
+				System.out.println( dollar1 +" is equal to "+actual1+"$");
 	}
 }
