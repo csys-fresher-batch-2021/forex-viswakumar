@@ -1,1 +1,2 @@
-# maven-web-project-template
+##### FOREX TRADING
+Feature 1 : CurrencyConverter 
