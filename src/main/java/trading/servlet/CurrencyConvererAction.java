@@ -30,7 +30,7 @@ public class CurrencyConvererAction extends HttpServlet {
 		
 		double convertAmount = CurrencyConverter.converter(amount, currencytype);
 		
-		response.sendRedirect("CurrencyConverter.jsp?convertedAmount=" + convertAmount);
+		response.sendRedirect("CurrencyConverter.jsp?convertedAmount=" + convertAmount+"&currencytype="+currencytype);
 		}
 
 }

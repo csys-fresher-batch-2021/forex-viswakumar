@@ -9,7 +9,6 @@
 	<form action="CurrencyConvererAction" method="get">
 	<label> enter amount</label>
 		<input type="number" id="amount" name="amount" min=1 max=10000 required autofocus/>
-
 		<select id="currencytype" name="currencytype">
                 <option value="dollar">dollar</option>
                 <option value="inr">INR</option>
@@ -20,8 +19,10 @@
 		</form>
 		   <%   
   
-		   String errorMessage = request.getParameter("convertedAmount");
-		   out.print(errorMessage);
+		   String convertedamount= request.getParameter("convertedAmount");
+		   String currencyType=request.getParameter("currencytype");
+		   if(convertedamount != null)
+		    out.print(convertedamount   +   currencyType);
   
 			%>  
 
