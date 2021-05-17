@@ -23,12 +23,14 @@ public class CurrencyConvererAction extends HttpServlet {
 //	}
 //
 //	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String currencytype = request.getParameter("currencytype");
 		double amount = Double.parseDouble(request.getParameter("amount"));
 		
 		double convertAmount = CurrencyConverter.converter(amount, currencytype);
-	}
+		
+		response.sendRedirect("CurrencyConverter.jsp?convertedAmount=" + convertAmount);
+		}
 
 }
